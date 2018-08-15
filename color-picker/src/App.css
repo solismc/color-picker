@@ -14,6 +14,19 @@
   color: white;
 }
 
+.Box-style {
+  width: 3em;
+  height: 3em;
+  margin: 3px;
+  border-radius: 5%;
+}
+
+.hsl-sliders {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .App-title {
   font-size: 1.5em;
 }

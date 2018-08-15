@@ -1,18 +1,71 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hue: 180,
+      saturation: 50,
+      lightness: 50
+    };
+  }
+
+  HueUpdated = event => {
+    console.log("updating hue");
+    const Hue = event.target.value;
+    this.setState({
+      hue: Hue
+    });
+  };
+
+  SaturationUpdated = event => {
+    console.log("updating saturation");
+    const Saturation = event.target.value;
+    this.setState({
+      saturation: Saturation
+    });
+  };
+
+  LightnessUpdated = event => {
+    console.log("updating lightness");
+    const Lightness = event.target.value;
+    this.setState({
+      lightness: Lightness
+    });
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Pick your favorite color!</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <section
+          className="Box-style"
+          style={{
+            backgroundColor: `hsl(${this.state.hue}, ${
+              this.state.saturation
+            }%, ${this.state.lightness}%)`
+          }}
+        />
+        <section className="hsl-sliders">
+          <input type="range" min="0" max="360" onInput={this.HueUpdated} />
+          <input
+            type="range"
+            min="0"
+            max="100"
+            onInput={this.SaturationUpdated}
+          />
+          <input
+            type="range"
+            min="0"
+            max="100"
+            onInput={this.LightnessUpdated}
+          />
+        </section>
       </div>
     );
   }
