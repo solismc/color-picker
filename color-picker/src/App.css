@@ -14,6 +14,13 @@
   color: white;
 }
 
+Box-and-sliders {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
 .Box-style {
   width: 3em;
   height: 3em;
@@ -25,6 +32,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 15%;
 }
 
 .App-title {

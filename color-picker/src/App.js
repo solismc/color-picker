@@ -43,6 +43,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Pick your favorite color!</h1>
         </header>
+        <section/>
         <section
           className="Box-style"
           style={{
