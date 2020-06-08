@@ -53,19 +53,12 @@ class App extends Component {
           }}
         />
         <section className="hsl-sliders">
+          <h1>Hue</h1>
           <input type="range" min="0" max="360" onInput={this.HueUpdated} />
-          <input
-            type="range"
-            min="0"
-            max="100"
-            onInput={this.SaturationUpdated}
-          />
-          <input
-            type="range"
-            min="0"
-            max="100"
-            onInput={this.LightnessUpdated}
-          />
+          <h1>Saturation</h1>
+          <input type="range" min="0" max="100" onInput={this.SaturationUpdated} />
+          <h1>Lightness</h1>
+          <input type="range" min="0" max="100" onInput={this.LightnessUpdated} />
         </section>
       </div>
     );

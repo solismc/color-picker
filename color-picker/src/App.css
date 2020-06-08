@@ -18,21 +18,28 @@ Box-and-sliders {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  
 }
 
 .Box-style {
-  width: 3em;
-  height: 3em;
-  margin: 3px;
-  border-radius: 5%;
+  width: 100vw;
+  height: 20vh;
 }
 
 .hsl-sliders {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 15%;
+  width: 50vw;
+  height: 50vh;
+  padding-left: 20vw;
+  align-content: space-between;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 .App-title {
